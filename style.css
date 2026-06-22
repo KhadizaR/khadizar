@@ -156,3 +156,87 @@ strong {
     border-bottom: 2px dashed #FF8E9E; /* Playful dashed underlines under your arts/majors */
     padding-bottom: 1px;
 }
+
+/* Split Canvas Grid Setup */
+.split-canvas-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr; /* Asymmetric split - slightly wider for engineering */
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Lane Blocks */
+.canvas-lane {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 24px;
+    border: 2px dashed #E8E5E0; /* Gives a cute sketchbook outline feel */
+    transition: all 0.3s ease;
+}
+
+/* Distinct color accents for each side of your brain */
+.canvas-lane.analytical:hover {
+    border-color: #A2B38B; /* Soft matcha green border on hover */
+    transform: translateY(-2px);
+}
+
+.canvas-lane.creative:hover {
+    border-color: #FF8E9E; /* Soft strawberry pink border on hover */
+    transform: translateY(-2px);
+}
+
+.lane-title {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.lane-intro {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 24px;
+}
+
+/* Custom Cozy List Styles */
+.cozy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cozy-list li {
+    font-size: 1rem;
+    margin-bottom: 14px;
+    line-height: 1.5;
+    color: #4A5545;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Small custom indicator bullet */
+.cozy-list li::before {
+    content: "◦";
+    position: absolute;
+    left: 0;
+    color: #A2B38B;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Styled inline keywords inside your text blocks */
+.cozy-list li span {
+    font-weight: 600;
+    color: #2C3639;
+    background-color: #FAF8F5;
+    padding: 1px 6px;
+    border-radius: 6px;
+}
+
+/* Responsive design for phones */
+@media (max-width: 768px) {
+    .split-canvas-grid {
+        grid-template-columns: 1fr; /* Stack into one column on smaller mobile screens */
+        gap: 20px;
+    }
+}
