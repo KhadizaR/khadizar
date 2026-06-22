@@ -95,3 +95,64 @@ footer {
     font-size: 0.9rem;
     opacity: 0.7;
 }
+
+/* Story Layout */
+.story-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.story-header {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    padding-left: 5px;
+    border-left: 4px solid #A2B38B; /* Custom matcha color marker next to section headings */
+}
+
+.story-list {
+    list-style: none; /* Removes default circles */
+    padding-left: 10px;
+    margin: 0;
+}
+
+.story-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+    color: #4A5545;
+}
+
+/* Cute custom indicator prefix for list items */
+.story-list li::before {
+    content: "🌱"; 
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.story-list li:hover::before {
+    transform: rotate(15deg) scale(1.2); /* Cute micro-wobble when you hover over a point */
+}
+
+/* Rounded Pastel Highlights */
+.highlight {
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.highlight.computational {
+    background-color: #E8F0FE;
+    color: #1A73E8;
+}
+
+strong {
+    color: #2C3639;
+    border-bottom: 2px dashed #FF8E9E; /* Playful dashed underlines under your arts/majors */
+    padding-bottom: 1px;
+}
